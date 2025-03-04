@@ -1,0 +1,49 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.introRDV {
+  background-color: #f7ebe491;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  width: 100%; /* Ajuster la largeur à 100% */
+}
+
+.calendly-container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.btnCalendly1 {
+  text-align: center; /* Centre le bouton */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.btnCalendly {
+  display: inline-block;
+  background-color: rgb(19, 19, 19);
+  color: rgb(255, 255, 255);
+  border: 1px solid transparent;
+  padding: 12px 25px;
+  font-size: 1rem;
+  transition: 0.3s;
+  text-decoration: none; /* Supprime le soulignement du lien */
+  font-weight: bold;
+}
+
+.btnCalendly:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(20, 20, 20);
+  border-color: rgb(24, 24, 24);
+}

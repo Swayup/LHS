@@ -1,0 +1,210 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.introGalerie {
+  position: relative;
+  text-align: center;
+}
+
+.introGalerie img {
+  width: 100%;
+  height: 42rem;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
+}
+
+.introGalerie::before {
+  content: ""; /* Crée un pseudo-élément */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Filtre gris semi-transparent */
+  z-index: 0; /* Assure que ce pseudo-élément soit en dessous du texte */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+}
+
+.text-overlay h2,
+.text-overlay p {
+  margin: 0;
+  padding: 10px;
+}
+
+.text-overlay h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn-rendezvous {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: rgb(24, 24, 24);
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  margin-top: 100px; /* Ajuste la position du bouton */
+}
+
+.btn-rendezvous:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+/* Conteneur principal */
+.gallery-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.gallery-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-container p {
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  max-width: 50rem;
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+/* Grille de la galerie */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 2rem;
+  grid-template-rows: auto; /* Laisser les lignes s'ajuster en fonction des éléments */
+}
+
+/* Éléments de la grille */
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Images dans la grille */
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Création de placements non symétriques */
+.grid-item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.grid-item:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.grid-item:nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.grid-item:nth-child(4) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.grid-item:nth-child(5) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.grid-item:nth-child(6) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.grid-item:nth-child(7) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.grid-item:nth-child(8) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Effet au survol */
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsivité : ajuster la grille pour des écrans plus petits */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour les tablettes */
+  }
+
+  .grid-item:nth-child(1),
+  .grid-item:nth-child(4),
+  .grid-item:nth-child(6) {
+    grid-column: span 2; /* Les grandes images prennent plus de place sur les tablettes */
+  }
+
+  .grid-item:nth-child(2),
+  .grid-item:nth-child(5) {
+    grid-row: span 2; /* Les images avec un row span de 2 */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 colonnes pour les petits écrans */
+  }
+
+  .grid-item:nth-child(1),
+  .grid-item:nth-child(4),
+  .grid-item:nth-child(6) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 colonne pour les très petits écrans */
+  }
+
+  .grid-item {
+    grid-column: span 1;
+  }
+}

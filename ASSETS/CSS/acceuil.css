@@ -1,0 +1,276 @@
+.imageIntro1 {
+  display: flex;
+  justify-content: center; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement */
+  width: 100vw; /* Prend toute la largeur de l'écran */
+  height: 80vh; /* Prend 80% de la hauteur de l'écran */
+  overflow: hidden; /* Empêche l'image de dépasser */
+}
+
+.imageIntro1 img {
+  width: 100%; /* L'image prend toute la largeur du conteneur */
+  height: 100%; /* L'image prend toute la hauteur du conteneur */
+  object-fit: cover; /* Remplit le conteneur en gardant un bon cadrage */
+  z-index: -1; /* Place l'image en arrière-plan */
+}
+
+@media (max-width: 768px) {
+  .imageIntro1 {
+    height: 60vh; /* Réduit la hauteur sur mobile */
+  }
+}
+
+.intro1 {
+  background-color: #f7ebe491;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.intro1 h3 {
+  font-size: 2.2rem;
+  color: #242424;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.intro1 p {
+  font-size: 1rem;
+  color: #494949;
+  text-align: center;
+  margin-top: 0.2rem;
+  font-family: "Albert Sans", sans-serif;
+}
+
+.textColor2 {
+  color: #ffc4a2;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around; /* Répartir les cercles sur la même ligne */
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  justify-content: center; /* Centrer les éléments horizontalement dans la colonne */
+  align-items: center; /* Centrer verticalement */
+}
+
+.infoBulles {
+  display: flex;
+  flex-direction: column; /* Placer le cercle et le texte dans une colonne */
+  justify-content: center; /* Centrer verticalement */
+  align-items: center; /* Centrer horizontalement */
+  background-color: #ffffff;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.circle {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  position: relative; /* Nécessaire pour les ombres internes et effets */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.07); /* Ombre subtile */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Animation douce au survol */
+}
+
+.circle:hover {
+  transform: translateY(-5px); /* Effet de léger soulèvement */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.1); /* Ombre plus forte au survol */
+}
+
+.circle1 {
+  background-color: #f5d6c6; /* couleur peau */
+  background: linear-gradient(
+    145deg,
+    #f5d6c6,
+    #e8bfa1
+  ); /* Dégradé de couleur peau */
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre interne subtile pour donner du relief */
+}
+
+.circle2 {
+  background-color: #c0c0c0; /* gris argenté */
+  background: linear-gradient(145deg, #c0c0c0, #a8a8a8); /* Dégradé argenté */
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre interne subtile */
+}
+
+.circle3 {
+  background-color: #f5d6c6; /* couleur peau */
+  background: linear-gradient(
+    145deg,
+    #f5d6c6,
+    #e8bfa1
+  ); /* Dégradé de couleur peau */
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre interne subtile */
+}
+
+.circle:hover::after {
+  opacity: 1; /* Apparition d'une lueur subtile au survol */
+}
+
+.explanation {
+  font-size: 16px;
+  margin-top: 10px; /* Espace entre le cercle et le texte explicatif */
+  text-align: center;
+}
+
+.BulleGeneral {
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 2.5rem;
+}
+
+.BulleGeneral p {
+  font-size: 1rem;
+  color: #242424;
+  text-align: center;
+  margin-top: 1rem;
+  width: 18vw;
+
+  font-family: "Albert Sans", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .BulleGeneral p {
+    width: 80vw;
+  }
+}
+.styleTextB {
+  font-size: 1.05rem;
+  color: #ffc4a2;
+  font-weight: bold;
+}
+
+.cta-button-container {
+  display: flex;
+  justify-content: center; /* Centrer le bouton */
+  margin-top: 1px; /* Ajouter de l'espace au-dessus */
+}
+
+.cta-button {
+  margin-bottom: 3rem; /* Ajouter de l'espace en dessous */
+  padding: 10px 30px; /* Taille plus petite que précédemment */
+  border: 1px solid #ffffff; /* Bordure couleur peau */
+  border-radius: 8px; /* Coins anguleux */
+  background-color: rgb(24, 24, 24); /* Fond noir par défaut */
+  color: rgb(255, 255, 255); /* Texte noir */
+  font-size: 16px; /* Taille du texte */
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Animation au survol */
+}
+
+.cta-button:hover {
+  background-color: #ffffff; /* Fond couleur peau au survol */
+  color: #ebba9e91; /* Texte noir pour contraste */
+  border-color: #ebba9e91; /* Bordure couleur peau au survol */
+}
+
+.cta-button:active {
+  transform: translateY(2px); /* Effet de clic pour le bouton */
+  box-shadow: none; /* Enlever l'ombre au clic */
+}
+
+.divider {
+  width: 50%; /* Largeur réduite du divider */
+  height: 2px; /* Hauteur de la ligne */
+  background-color: rgb(29, 29, 29); /* Couleur noire par défaut */
+  margin: 20px auto; /* Centrer et ajouter de l'espacement autour */
+  transition: background-color 0.3s ease; /* Animation fluide pour la couleur */
+}
+
+.finPage1 {
+  background-color: #faf5f291;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials-container {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f7ebe491; /* Fond léger pour séparer de l'arrière-plan */
+  margin-bottom: rem;
+}
+
+.testimonials-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  flex: 1 1 30%; /* Chaque témoignage prendra 30% de la largeur de l'écran */
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px); /* Légère élévation au survol */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+.testimonial-content p {
+  font-size: 18px;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-author p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.boutonCTAPrice button {
+  background-color: #d3a28691;
+  border-color: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  padding: 5px 10px;
+}
+.boutonCTAPrice button:hover {
+  background-color: #8f634a91;
+  border-color: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  padding: 5px 10px;
+}

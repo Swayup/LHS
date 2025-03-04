@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  flex-direction: column;
+  align-items: center; /* Centrage horizontal */
+  font-family: "Albert Sans", sans-serif;
+}
+
+.intro2 {
+  background-color: #f7ebe491;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  width: 100%; /* Ajuster la largeur à 100% */
+}
+
+.intro2 h2 {
+  margin-bottom: 1rem;
+}
+
+.stylebold3 {
+  font-weight: bold;
+}
+
+.cartito h5 {
+  text-align: center;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body {
+  max-height: 12.5rem;
+  height: 12.5rem;
+}
+
+.card-body p {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .card-body {
+    max-height: 15rem;
+    height: 15rem;
+  }
+}
+
+.cartito {
+  margin-bottom: 5rem;
+}
+
+.scroll-cards {
+  width: 200%; /* La largeur totale du conteneur est 4 fois celle de l'écran */
+  animation: scroll-left 15s linear infinite; /* Animation continue de 15s */
+}
+
+.scroll-cards .col {
+  flex: 0 0 auto; /* Ne pas laisser les éléments se redimensionner */
+  width: 20%; /* Chaque carte occupe 25% de la largeur du conteneur */
+  margin-right: 2%; /* Un petit espace entre les cartes */
+}
+
+.scroll-cards img {
+  width: 100%; /* L'image prend toute la largeur de la carte */
+  height: auto; /* Garder la proportion de l'image */
+  object-fit: cover; /* S'assurer que l'image ne déforme pas */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30%); /* Déplacer de 100% de la largeur des cartes */
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-cards {
+    display: block; /* On empile les cartes en colonne */
+    width: 100%; /* Ajustement pour éviter les débordements */
+    animation: none; /* Suppression de l'animation */
+  }
+
+  .scroll-cards .col {
+    width: 100%; /* Chaque carte prend toute la largeur */
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px; /* Espacement entre les cartes */
+  }
+
+  .scroll-cards .card {
+    width: 100%;
+  }
+}
+
+.divider {
+  width: 100%; /* Largeur réduite du divider */
+  height: 0.8px; /* Hauteur de la ligne */
+  background-color: rgb(34, 34, 34); /* Couleur noire par défaut */
+  margin: 10px auto; /* Centrer et ajouter de l'espacement autour */
+  transition: background-color 0.3s ease; /* Animation fluide pour la couleur */
+}
+
+.boutonCTA3 button {
+  background-color: #ebba9e91;
+  border-color: #ffffff;
+  color: #161616;
+  margin-bottom: 2rem;
+  padding: 5px 10px;
+}
+
+.boutonCTA3 button:hover {
+  background-color: #ffffff;
+  border-color: #161616;
+  color: #161616;
+  margin-bottom: 2rem;
+  padding: 5px 10px;
+}
+
+.tarifsPage {
+  background-color: #ffffff91;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarifsPage h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.tarifs-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333; /* Couleur plus élégante */
+  font-weight: 600;
+}
+
+.tarifs-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tarifs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tarifs-table th,
+.tarifs-table td {
+  text-align: left;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tarifs-table th {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 700;
+}
+
+.tarifs-table td {
+  background-color: #fff;
+}
+
+.tarifs-table td:nth-child(2) {
+  text-align: center;
+  padding-right: 50px; /* Ajoute plus d'espace à droite de la colonne Tarif */
+}
+
+.tarifs-table td:nth-child(3) {
+  padding-left: 50px; /* Ajoute plus d'espace à gauche de la colonne Description */
+}
+
+.tarifs-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Optionnel : ajouter une bordure plus discrète sur les cellules */
+.tarifs-table th,
+.tarifs-table td {
+  border-right: 1px solid #e0e0e0;
+}
+
+.tarifs-table td:last-child {
+  border-right: none; /* Supprimer la bordure de la dernière colonne */
+}
+
+/* Container des boutons */
+.button-container {
+  display: flex; /* Utilisation de flexbox pour les placer sur la même ligne */
+  justify-content: center; /* Centrer les boutons horizontalement */
+  gap: 10px; /* Espacement entre les boutons */
+  margin-top: 5px; /* Espace avec l'élément au-dessus */
+  margin-bottom: 7rem;
+}
+
+/* Bouton noir */
+.btn-black {
+  background-color: #161616; /* Noir */
+  color: #fafafa; /* Couleur peau */
+  border: 1px solid transparent; /* Bordure transparente par défaut */
+  padding: 12px 53px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transition douce */
+}
+
+/* Bouton couleur peau */
+.btn-skin {
+  background-color: #ebba9e91; /* Couleur peau */
+  color: #161616; /* Noir */
+  border: 1px solid transparent; /* Bordure transparente par défaut */
+  padding: 12px 30px;
+  font-size: 1rem;
+
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transition douce */
+}
+
+/* Effet de survol (au passage de la souris) */
+.btn-black:hover {
+  background-color: #ffffff; /* Fond devient blanc */
+  color: #161616; /* Texte devient noir */
+  border-color: #161616; /* Bordure devient noire */
+}
+
+.btn-skin:hover {
+  background-color: #ffffff; /* Fond devient blanc */
+  color: #ebba9e91; /* Texte devient couleur peau */
+  border-color: #ebba9e91; /* Bordure devient couleur peau */
+}
